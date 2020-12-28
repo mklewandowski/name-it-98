@@ -1,0 +1,48 @@
+.app {
+  text-align: center;
+  background-image: url("./cloud.png");
+  background-repeat: repeat;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.app-header {
+  background-color: #00FFFF;
+  min-height: 150px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  color: #FF00DC;
+  font-weight: bold;
+}
+
+.app-title {
+  margin: 10px 30px;
+}
+
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+.blue {
+  color: blue;
+}
+.orange {
+  color: orange;
+}
+.yellow {
+  color: yellow;
+}
+.indigo {
+  color: indigo;
+}
+.violet {
+  color: violet;
+}
