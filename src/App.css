@@ -21,9 +21,22 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: 60px;
+  font-size: 80px;
   font-weight: bold;
   margin-top: 10px;
+}
+
+.credits {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #B6FF00;
+}
+
+.credit {
+  margin: 10px;
+  height: 100px;
 }
 
 .app-footer {
@@ -54,11 +67,19 @@
 
 .chooser {
   border: solid 5px orangered;
-  width: fit-content;
+  width: 1000px;
   margin: 20px;
   padding: 20px;
 }
 
+.choices {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: 200px;
+  margin: 10px;
+}
 
 .name-it {
   font-size: 35px;
