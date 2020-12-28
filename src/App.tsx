@@ -1,6 +1,8 @@
 import React from 'react';
 import baby from "./baby.gif";
 import stork from "./stork.gif";
+import construction from "./construction.gif";
+import counter from "./counter.gif";
 import './App.css';
 
 function App() {
@@ -26,24 +28,45 @@ function App() {
         <img src={baby}/>
       </header>
 
-      <div className="chooser">
-        Let's name that baby! Choose your interests!  Select as many as you want!
-        <div className="choice">
-          <input type="checkbox" id="choice1" name="choice1" value="choice1"/>
-          <label>Green Bay Packers</label>
+      <div className="content">
+        <div className="chooser">
+          Let's name that baby! Choose your interests!  Select as many as you want!
+          <div className="choice">
+            <input type="checkbox" id="choice1" name="choice1" value="choice1"/>
+            <label>Green Bay Packers</label>
+          </div>
+          <div className="choice">
+            <input type="checkbox" id="choice2" name="choice2" value="choice2"/>
+            <label>Good-ish TV Sitcoms</label>
+          </div>
+          <div className="choice">
+            <input type="checkbox" id="choice4" name="choice4" value="choice4"/>
+            <label>Regal Sounding Things</label>
+          </div>
+          <div className="choice">
+            <input type="checkbox" id="choice5" name="choice5" value="choice5"/>
+            <label>Assorted Cheeses</label>
+          </div>
+          <div className="choice">
+            <input type="checkbox" id="choice6" name="choice6" value="choice6"/>
+            <label>Bees</label>
+          </div>
+          <div className="choice">
+            <input type="checkbox" id="choice3" name="choice3" value="choice3"/>
+            <label>Vice Presidents of the 1800s</label>
+          </div>
         </div>
-        <div className="choice">
-          <input type="checkbox" id="choice2" name="choice2" value="choice2"/>
-          <label>Good-ish TV Sitcoms</label>
-        </div>
-        <div className="choice">
-          <input type="checkbox" id="choice3" name="choice3" value="choice3"/>
-          <label>Vice Presidents of the 1800s</label>
-        </div>
+
+
+        <button className="name-it">NAME IT</button>
+        <div className="name">Your baby name is __________</div>
       </div>
 
-      <button>NAME IT</button>
-      <div>Your baby name is __________</div>
+      <div className="app-footer">
+        <img src={construction}/>
+        © 1998, Lat Mewandowski
+        <img src={counter}/>
+      </div>
     </div>
   );
 }

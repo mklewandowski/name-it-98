@@ -7,6 +7,11 @@
   bottom: 0;
   left: 0;
   right: 0;
+  font-size: 25px;
+  text-shadow: 1px 1px #FF00DC;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .app-header {
@@ -17,12 +22,57 @@
   align-items: center;
   justify-content: center;
   font-size: 60px;
-  color: #FF00DC;
   font-weight: bold;
+  margin-top: 10px;
+}
+
+.app-footer {
+  background-color: #00FFFF;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: normal;
+  text-shadow: none;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
 .app-title {
   margin: 10px 30px;
+  text-shadow: 3px 3px #FF00DC;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.chooser {
+  border: solid 5px orangered;
+  width: fit-content;
+  margin: 20px;
+  padding: 20px;
+}
+
+
+.name-it {
+  font-size: 35px;
+  text-shadow: 1px 1px #FF00DC;
+  width: 300px;
+  height: 50px;
+  border-width: 2px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.name {
+  font-size: 40px;
+  margin: 20px;
 }
 
 .red {
