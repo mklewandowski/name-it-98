@@ -1,0 +1,14 @@
+.app-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px 0 20px 0;
+  width: 100%;
+  min-height: 100px;
+  background-color: #00FFFF;
+  font-size: 20px;
+  font-weight: normal;
+  text-shadow: none;
+}

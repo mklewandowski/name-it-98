@@ -1,0 +1,17 @@
+.credits {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 5px 0 5px 0;
+  font-size: 16px;
+  background-color: #B6FF00;
+}
+
+.credit {
+  margin: 10px;
+  height: 80px;
+  margin: 10px 0 10px 0;
+}

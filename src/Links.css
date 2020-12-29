@@ -1,0 +1,33 @@
+.links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 5px 0 5px 0;
+}
+
+.box-wrapper {
+  border-top: solid 2px gray;
+  border-left: solid 2px gray;
+  border-bottom: solid 2px white;
+  border-right: solid 2px white;
+  margin: 2px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+  font-size: 15px;
+  height: 80px;
+  padding: 10px;
+  border-top: solid 2px black;
+  border-left: solid 2px black;
+  border-bottom: solid 2px lightgray;
+  border-right: solid 2sspx lightgray;
+}
+
+.linky {
+  width: 100px;
+}

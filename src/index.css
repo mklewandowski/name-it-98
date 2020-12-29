@@ -1,12 +1,14 @@
+html, body{
+  min-height: 100vh;
+  overflow: auto;
+}
+
 body {
-  margin: 0;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url("./cloud.png");
   background-repeat: repeat;
-  width: 100%;
-  height: 100%;
 }
 
 code {

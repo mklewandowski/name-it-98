@@ -1,35 +1,15 @@
 import React, {useState}  from 'react';
-import baby from "./baby.gif";
-import stork from "./stork.gif";
-import construction from "./construction.gif";
-import counter from "./counter.gif";
-import email from "./email.gif";
-import kramer from "./kramer.gif";
-import penguin from "./penguin.gif";
-import wrestle from "./wrestle.gif";
-import flag from "./flag.gif";
 import money from "./money.gif";
 import arrowright from "./arrow-right.gif";
 import arrowleft from "./arrow-left.gif";
-
-import contact from "./contact.gif";
-import guestbook from "./guestbook.gif";
-import search from "./search.gif";
-import y2k from "./y2k.gif";
-import geo from "./geo.gif";
-
 import check from "./check.jpg";
 import uncheck from "./uncheck.jpg";
 
 import './App.css';
-
-const sideLinks = [
-  {text: "Contact", image: contact, link:"https://www.youtube.com/watch?v=iF07mccxIWM"},
-  {text: "Guestbook", image: guestbook, link:"https://www.youtube.com/watch?v=mOYZaiDZ7BM"},
-  {text: "Search", image: search, link:"https://www.youtube.com/watch?v=IzqMrhG50q0"},
-  {text: "Support", image: y2k, link:"https://www.youtube.com/watch?v=ebdTUxBIaTY"},
-  {text: "WWW", image: geo, link:"https://www.youtube.com/watch?v=1npzZu83AfU"},
-]
+import { Header } from './Header';
+import { Links } from './Links';
+import { Footer } from './Footer';
+import { Credits } from './Credits';
 
 const categories = [
       "Green Bay Packers",
@@ -46,7 +26,8 @@ const categories = [
       "Onamonapia",
       "Famous Wisconsinites",
       "Star Trek",
-      "Glam Rock"
+      "Glam Rock",
+      "'80s Toys"
     ];
 
 const nameParts = [
@@ -78,12 +59,14 @@ const nameParts = [
    "Elim","Brunt","Zek","Picard"], //DONE
   ["David","Bowie","Slade","T-Rex","Sweet","Glitter","Ziggy","Iggy","Pop","Quatro","Roxy","Ferry","Eno","Dart","Cooper","Roller","Arrow","Mott",
    "Doll","Spark"], //DONE
+  ["Huckleberry","Pieman","Bow","Strong Heart","Starlite","Red Butler","Buddy Blue","Murky","Lurky","Glitterbot","Funshine","Synergy","Clash"]
 ]
 
 function App() {
   const [checks, setCheck] = useState([false, false, false, false, false,
                                        false, false, false, false, false,
-                                       false, false, false, false, false]);
+                                       false, false, false, false, false,
+                                       false]);
   const [name, setName] = useState("______");
   const [cash, setCash] = useState(false);
   const onCheck = (index: number) => () => {
@@ -114,90 +97,44 @@ function App() {
 
   return (
     <div className="app">
-      <header className="app-header">
-        <img src={stork} alt="stork" />
-        <div className="app-title">
-          <span className="red">N</span>
-          <span className="orange">A</span>
-          <span className="yellow">M</span>
-          <span className="green">E</span>
-          <span className="blue">{` I`}</span>
-          <span className="indigo">T</span>
-          <span className="violet">!</span>
-          <span className="red">!</span>
-          <span className="orange">!</span>
-          <span className="yellow">!</span>
-          <span className="green">!</span>
-          <span className="blue">!</span>
-          <span className="indigo">!</span>
-        </div>
-        <img src={baby} alt="baby" />
-      </header>
+      <Header />
+      <Links />
 
-      <div className="content">
-        <div className="sidebar">
-          { sideLinks.map((sidelink: any, i: number) =>
-            <a href={sidelink.link} key={`link-${i}`}>
-              <div className="box-wrapper">
-                <div className="box">
-                  {sidelink.text}
-                  <img className="linky" src={sidelink.image} alt={sidelink.text} />
-                </div>
+      <div className="chooser-wrapper">
+        <div className="chooser">
+          Let's name that baby! Choose your interests!  Select as many as you want!
+          <div className="choices">
+            { categories.map((category: string, i: number) =>
+              <div key={`cat-${i}`} className="choice" onClick={onCheck(i)}>
+                <img className="check" src={checks[i] ? check : uncheck} alt="check" />
+                <label className="choice-label">{category}</label>
               </div>
-            </a>
-          )}
-        </div>
-
-        <div className="main">
-          <div className="chooser-wrapper">
-            <div className="chooser">
-              Let's name that baby! Choose your interests!  Select as many as you want!
-              <div className="choices">
-                { categories.map((category: string, i: number) =>
-                  <div key={`cat-${i}`} className="choice" onClick={onCheck(i)}>
-                    <img className="check" src={checks[i] ? check : uncheck} alt="check" />
-                    <label className="choice-label">{category}</label>
-                  </div>
-                )}
-              </div>
-            </div>
+            )}
           </div>
-
-          <div className="horizontal-container">
-            <img src={arrowleft} alt="arrow" />
-            <button className="name-it" onClick={onClick}>NAME IT</button>
-            <img src={arrowright} alt="arrow" />
-          </div>
-
-          <div>
-            <span className="name-label">Your baby name is</span>
-            <span className="name">{name}</span>
-          </div>
-
-          { cash &&
-            <div className="horizontal-container">
-              <img src={money} alt="money" />
-              Nice alliteration!
-              <img src={money} alt="money" />
-            </div>
-          }
         </div>
       </div>
 
-      <div className="credits">
-        This world wide web page brought to you by:
-        <img className="credit" src={flag} alt="flag" />
-        <img className="credit" src={wrestle} alt="wrestle" />
-        <img className="credit" src={kramer} alt="tv" />
-        <img className="credit" src={penguin} alt="penguin" />
-        <img className="credit" src={email} alt="email" />
+      <div className="horizontal-container">
+        <img src={arrowleft} className="arrow" alt="arrow" />
+        <button className="name-it" onClick={onClick}>NAME IT</button>
+        <img src={arrowright} className="arrow"  alt="arrow" />
       </div>
 
-      <div className="app-footer">
-        <img src={construction} alt="construction" />
-        © 1998, Lat Mewandowski
-        <img src={counter} alt="counter" />
+      <div className="name-container">
+        <span className="name-label">Your baby name is</span>
+        <span className="name">{name}</span>
       </div>
+
+      { cash &&
+        <div className="horizontal-container">
+          <img src={money} alt="money" />
+          Nice alliteration!
+          <img src={money} alt="money" />
+        </div>
+      }
+
+      <Credits />
+      <Footer />
     </div>
   );
 }

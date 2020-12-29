@@ -1,0 +1,40 @@
+.app-header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+  width: 100%;
+  margin: 10px 0 10px 0;
+  background-color: #00FFFF;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.app-title {
+  margin: 10px 30px;
+  text-shadow: 3px 3px #FF00DC;
+}
+
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+.blue {
+  color: blue;
+}
+.orange {
+  color: orange;
+}
+.yellow {
+  color: yellow;
+}
+.indigo {
+  color: indigo;
+}
+.violet {
+  color: violet;
+}
