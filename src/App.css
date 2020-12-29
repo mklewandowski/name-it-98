@@ -2,11 +2,6 @@
   text-align: center;
   background-image: url("./cloud.png");
   background-repeat: repeat;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   font-size: 25px;
   text-shadow: 1px 1px #FF00DC;
   display: flex;
@@ -36,7 +31,8 @@
 
 .credit {
   margin: 10px;
-  height: 100px;
+  height: 80px;
+  margin: 10px 0 10px 0;
 }
 
 .app-footer {
@@ -50,7 +46,7 @@
   font-weight: normal;
   text-shadow: none;
   padding: 10px;
-  margin-bottom: 10px;
+  margin: 10px 0 20px 0;
 }
 
 .app-title {
@@ -60,9 +56,36 @@
 
 .content {
   display: flex;
+  flex-direction: row;
+  margin: 10px 0 40px 0;
+}
+
+.sidebar {
+  width: 200px;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: solid 4px gray;
+  overflow: scroll;
+  margin: 2px;
+  font-size: 15px;
+  height: 80px;
+  padding: 10px;
+}
+
+.linky {
+  width: 100px;
 }
 
 .chooser {
@@ -77,7 +100,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-items: flex-start;
-  height: 200px;
+  height: 180px;
   margin: 10px;
 }
 
@@ -91,9 +114,12 @@
   margin: 10px;
 }
 
-.name {
+.name-label {
   font-size: 40px;
   margin: 20px;
+}
+.name {
+  font-size: 60px;
 }
 
 .red {
