@@ -16,7 +16,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: 80px;
+  font-size: 70px;
   font-weight: bold;
   margin-top: 10px;
 }
@@ -65,10 +65,19 @@
 }
 
 .main {
-  width: 100%;
+  flex: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-right: 200px;
+}
+
+.box-wrapper {
+  border-top: solid 2px gray;
+  border-left: solid 2px gray;
+  border-bottom: solid 2px white;
+  border-right: solid 2px white;
+  margin: 2px;
 }
 
 .box {
@@ -76,22 +85,34 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: solid 4px gray;
   overflow: scroll;
-  margin: 2px;
   font-size: 15px;
   height: 80px;
   padding: 10px;
+  border-top: solid 2px black;
+  border-left: solid 2px black;
+  border-bottom: solid 2px lightgray;
+  border-right: solid 2sspx lightgray;
 }
 
 .linky {
   width: 100px;
 }
 
-.chooser {
-  border: solid 5px orangered;
-  width: 1000px;
+.chooser-wrapper {
+  border-top: solid 4px gray;
+  border-left: solid 4px gray;
+  border-bottom: solid 4px white;
+  border-right: solid 4px white;
   margin: 20px;
+}
+
+.chooser {
+  border-top: solid 4px black;
+  border-left: solid 4px black;
+  border-bottom: solid 4px lightgray;
+  border-right: solid 4px lightgray;
+  width: 900px;
   padding: 20px;
 }
 
@@ -101,7 +122,24 @@
   flex-wrap: wrap;
   align-items: flex-start;
   height: 180px;
+  width: 900px;
   margin: 10px;
+}
+
+.choice {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2px 5px 2px 10px;
+}
+
+.check {
+  margin: 5px;
+}
+
+.choice-label {
+  cursor: pointer;
+  font-size: 20px;
 }
 
 .name-it {
@@ -112,6 +150,12 @@
   border-width: 2px;
   cursor: pointer;
   margin: 10px;
+}
+:hover.name-it {
+  background-color: aliceblue;
+}
+:active.name-it {
+  background-color: azure;
 }
 
 .name-label {
