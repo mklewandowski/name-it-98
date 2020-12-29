@@ -8,6 +8,9 @@ import kramer from "./kramer.gif";
 import penguin from "./penguin.gif";
 import wrestle from "./wrestle.gif";
 import flag from "./flag.gif";
+import money from "./money.gif";
+import arrowright from "./arrow-right.gif";
+import arrowleft from "./arrow-left.gif";
 
 import contact from "./contact.gif";
 import guestbook from "./guestbook.gif";
@@ -48,17 +51,24 @@ const categories = [
 
 const nameParts = [
   ["Aaron","Davonte","Brett","Favre","Aaron-rodgers","Clay","Matthews","Lambeau","Curly","Reggie","Sterling","Bart","Starr","Jordy","Driver","Ahman"],
-  ["Urkel","Balki","Uncle Joey","MacGyver","Tripper","Arnold","Willis","Benson","Belvedere","Uncle Jessie","Bartokomous","Punky","Brewster","Kip","Charles","Buddy","Mork","Bull","Keaton"],
-  ["Alastair","Jasper","Wigbert","Kalman","Chauncy","Blandford","Barnaby","Balthasar","Benedict","Delaney","Hamilton","Jamison","Julian","Kingsley","Laurent","Maximus","Napoleon","Prescott","Quentin","Birch","Brinley","Bromley","Clifford","Dudley","Durward","Courtland","Hagley","Hawthorne","Hedley","Hendrick","Leland","Marden","Millard","Layton"],  //DONE
+  ["Urkel","Balki","Uncle Joey","MacGyver","Tripper","Arnold","Willis","Benson","Belvedere","Uncle Jessie","Bartokomous","Punky","Brewster","Kip",
+   "Charles","Buddy","Mork","Bull","Keaton"],
+  ["Alastair","Jasper","Wigbert","Kalman","Chauncy","Blandford","Barnaby","Balthasar","Benedict","Delaney","Hamilton","Jamison","Julian","Kingsley",
+   "Laurent","Maximus","Napoleon","Prescott","Quentin","Birch","Brinley","Bromley","Clifford","Dudley","Durward","Courtland","Hagley","Hawthorne",
+   "Hedley","Hendrick","Leland","Marden","Millard","Layton","Pigbert","Figbert","Buckley","Brock","Burgess","Beardsley"],  //DONE
   ["Brie","Havarti","Manchego","Cotija","Pecorino","Stilton","Gorgonzola","Cheddar","Fontina"],
   ["Bombus","Impatiens","Ignitus","Jacobsoni","Cryptarum","Affinis","Franklini"],
-  ["Thomas","Aaron","George","Elbridge","Daniel","John","Martin","Richard","Millard","Wiliam","Hannibal","Andrew","Henry","Schuyler","Chester","Levi","Adelai","Garret"],  //DONE
+  ["Thomas","Aaron","George","Elbridge","Daniel","John","Martin","Richard","Millard","William","Hannibal","Andrew","Henry","Schuyler","Chester",
+   "Levi","Adelai","Garret"],  //DONE
   ["Gordon","Shumway","Melmac","Willie","Tanner","Ochmonek","Lucky"], //DONE
-  ["Darth","Vader","Kylo","Joker","Sauron","Norman","Bane","Biff","Hans-gruber","HAL","Chucky","Gekko","Freddy","Immortan","Toe-cutter","Thanos","Keyser","Pennywise","Anton","Goldfinger","Voldemort"], //DONE
+  ["Darth","Vader","Kylo","Joker","Sauron","Norman","Bane","Biff","Hans-gruber","HAL","Chucky","Gekko","Freddy","Immortan","Toe-cutter","Thanos",
+   "Keyser","Pennywise","Anton","Goldfinger","Voldemort"], //DONE
   ["AC","Zack","Slater","Morris","Screech","Powers","Belding","Max"], //DONE
   ["Patsy","Cupid","Chief","Sport","Ossee","Cy","Cowboy","Otto","Lave","Crazy","Kid","Highball","Ice Box","Chippy","Buck"], //DONE
-  ["Pepper","Barqs","Fanta","Surge","Fresca","RC","Big-red","Pibb","Crush","Faygo","Diet-rite","Squirt","Jolt","Orangina","Mug","Schweppe","Slice","Patio","Dewey","Pep","Seven"], //DONE
-  ["Woof","Oomph","Argh","Bang","Blorp","Boom","Buzz","Chomp","Clack","Ding","Fizz","Glug","Hoot","Honk","Ping","Plink","Plop","Slush","Slosh","Snarf","Splat","Thud","Whizz","Woof","Zap","Zing","Zoom-zoom"], //DONE
+  ["Pepper","Barqs","Fanta","Surge","Fresca","RC","Big-red","Pibb","Crush","Faygo","Diet-rite","Squirt","Jolt","Orangina","Mug","Schweppe","Slice",
+   "Patio","Dewey","Pep","Seven"], //DONE
+  ["Woof","Oomph","Argh","Bang","Blorp","Boom","Buzz","Chomp","Clack","Ding","Fizz","Glug","Hoot","Honk","Ping","Plink","Plop","Slush","Slosh",
+   "Snarf","Splat","Thud","Whizz","Woof","Zap","Zing","Zoom-zoom","Bash","Bark","Bam-bam","Beep","Brrring","Boing","Blurt"], //DONE
   ["Liberace","Orson","Thonton","Uecker","Ringling","Keefe","Defoe","Farley","Spencer","Welles","Lloyd","Wright","Ueck"], //DONE
   ["Spock","Kirk","Rekar","Nero","Tomalak","Valdore","Jarok","Bones","Scotty","Pavel","Phlox","Telev","Zobral","Mestral","Worf","Rom","Nog","Dukat","Elim","Brunt","Zek","Picard"], //DONE
   ["David","Bowie","Slade","T-Rex","Sweet","Glitter","Ziggy"],
@@ -69,6 +79,7 @@ function App() {
                                        false, false, false, false, false,
                                        false, false, false, false, false]);
   const [name, setName] = useState("______");
+  const [cash, setCash] = useState(false);
   const onCheck = (index: number) => () => {
     const updatedChecks = [...checks];
     const checkVal = checks[index];
@@ -83,9 +94,11 @@ function App() {
         parts = [...parts, ...namePart];
       }
     });
+    console.log(parts.length);
     const newFirst = parts.length ? parts[getRandomInt(parts.length - 1)] : "Nameless";
     const newMiddle = parts.length ? parts[getRandomInt(parts.length - 1)] : "Baby";
     const newName = `${newFirst} ${newMiddle} Beyer`;
+    setCash(newFirst.charAt(0) === "B" && newMiddle.charAt(0) === "B")
     setName(newName);
   }
 
@@ -144,12 +157,24 @@ function App() {
             </div>
           </div>
 
-          <button className="name-it" onClick={onClick}>NAME IT</button>
+          <div className="horizontal-container">
+            <img src={arrowleft} alt="arrow" />
+            <button className="name-it" onClick={onClick}>NAME IT</button>
+            <img src={arrowright} alt="arrow" />
+          </div>
 
           <div>
             <span className="name-label">Your baby name is</span>
             <span className="name">{name}</span>
           </div>
+
+          { cash &&
+            <div className="horizontal-container">
+              <img src={money} alt="money" />
+              Nice alliteration!
+              <img src={money} alt="money" />
+            </div>
+          }
         </div>
       </div>
 
