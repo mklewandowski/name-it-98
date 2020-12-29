@@ -1,5 +1,7 @@
 import React, {useState}  from 'react';
 import money from "./money.gif";
+import computer from "./computer.gif";
+import homie from "./homie.gif";
 import arrowright from "./arrow-right.gif";
 import arrowleft from "./arrow-left.gif";
 import check from "./check.jpg";
@@ -69,6 +71,9 @@ function App() {
                                        false]);
   const [name, setName] = useState("______");
   const [cash, setCash] = useState(false);
+  const [repeat, setRepeat] = useState(false);
+  const [needBreak, setNeedBreak] = useState(false);
+  const [clicks, setClicks] = useState(0);
   const onCheck = (index: number) => () => {
     const updatedChecks = [...checks];
     const checkVal = checks[index];
@@ -83,11 +88,15 @@ function App() {
         parts = [...parts, ...namePart];
       }
     });
+    setClicks(clicks + 1);
+    setNeedBreak(clicks % 13 === 0 && clicks > 0);
+
     console.log(parts.length);
     const newFirst = parts.length ? parts[getRandomInt(parts.length - 1)] : "Nameless";
     const newMiddle = parts.length ? parts[getRandomInt(parts.length - 1)] : "Baby";
     const newName = `${newFirst} ${newMiddle} Beyer`;
     setCash(newFirst.charAt(0) === "B" && newMiddle.charAt(0) === "B")
+    setRepeat(newFirst === newMiddle);
     setName(newName);
   }
 
@@ -125,11 +134,27 @@ function App() {
         <span className="name">{name}</span>
       </div>
 
-      { cash &&
+      { repeat &&
+        <div className="horizontal-container">
+          <img src={homie} alt="homie" />
+          A bit repetitive?
+          <img src={homie} alt="homie" />
+        </div>
+      }
+
+      { cash && !repeat &&
         <div className="horizontal-container">
           <img src={money} alt="money" />
           Nice alliteration!
           <img src={money} alt="money" />
+        </div>
+      }
+
+      { needBreak && !repeat && !cash &&
+        <div className="horizontal-container">
+          <img src={computer} alt="computer" />
+          Addictive! Don't stop now!
+          <img src={computer} alt="computer" />
         </div>
       }
 
