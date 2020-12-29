@@ -29,7 +29,10 @@ const categories = [
       "Famous Wisconsinites",
       "Star Trek",
       "Glam Rock",
-      "'80s Toys"
+      "'80s Toys",
+      "Small Towns in the Midwest",
+      "Candy",
+      "Pro Wrestling"
     ];
 
 const nameParts = [
@@ -61,14 +64,19 @@ const nameParts = [
    "Elim","Brunt","Zek","Picard"], //DONE
   ["David","Bowie","Slade","T-Rex","Sweet","Glitter","Ziggy","Iggy","Pop","Quatro","Roxy","Ferry","Eno","Dart","Cooper","Roller","Arrow","Mott",
    "Doll","Spark"], //DONE
-  ["Huckleberry","Pieman","Bow","Strong Heart","Starlite","Red Butler","Buddy Blue","Murky","Lurky","Glitterbot","Funshine","Synergy","Clash"]
+  ["Huckleberry","Pieman","Bow","Strong Heart","Starlite","Red Butler","Buddy Blue","Murky","Lurky","Glitterbot","Funshine","Synergy","Clash"],
+  ["Troy","Geneva","Dells","Baraboo","Wausau","Minocqua","Horeb","Ash","Wauwa","Harbor","Ripon","Beloi","Mequon","Glarus","Elkhart","Moon","Wien",
+   "Rozell","Cambria","Brillion","Holland","Sherwood"],
+  ["Mars","Milky Way","Butterfinger","Smartie","Bit-O","Goo Goo","Gummy","Charleston","Chuckles","Milk-dud","Dud","Skittle","Gob","Gobstopper",
+   "Kit","Kat","Twix"],
+  ["Hulk","Warrior","Braun","Roman","Reigns","Bray","Wyatt","Kofi","Miz","Slapjack","Cactus","Dino","T-Bar","Shelton","Finn","Balor","Taker"]
 ]
 
 function App() {
   const [checks, setCheck] = useState([false, false, false, false, false,
                                        false, false, false, false, false,
                                        false, false, false, false, false,
-                                       false]);
+                                       false, false, false, false]);
   const [name, setName] = useState("______");
   const [cash, setCash] = useState(false);
   const [repeat, setRepeat] = useState(false);
