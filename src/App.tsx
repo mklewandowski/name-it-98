@@ -65,7 +65,7 @@ const nameParts = [
   ["David","Bowie","Slade","T-Rex","Sweet","Glitter","Ziggy","Iggy","Pop","Quatro","Roxy","Ferry","Eno","Dart","Cooper","Roller","Arrow","Mott",
    "Doll","Spark"], //DONE
   ["Huckleberry","Pieman","Bow","Strong Heart","Starlite","Red Butler","Buddy Blue","Murky","Lurky","Glitterbot","Funshine","Synergy","Clash"],
-  ["Troy","Geneva","Dells","Baraboo","Wausau","Minocqua","Horeb","Ash","Wauwa","Harbor","Ripon","Beloi","Mequon","Glarus","Elkhart","Moon","Wien",
+  ["Troy","Geneva","Dells","Baraboo","Wausau","Minocqua","Horeb","Ash","Wauwa","Harbor","Ripon","Beloit","Mequon","Glarus","Elkhart","Moon","Wien",
    "Rozell","Cambria","Brillion","Holland","Sherwood"],
   ["Mars","Milky Way","Butterfinger","Smartie","Bit-O","Goo Goo","Gummy","Charleston","Chuckles","Milk-dud","Dud","Skittle","Gob","Gobstopper",
    "Kit","Kat","Twix"],

@@ -74,7 +74,7 @@
 .name-it {
   font-size: 35px;
   text-shadow: 1px 1px #FF00DC;
-  width: 200px;
+  min-width: 200px;
   height: 75px;
   border-width: 2px;
   cursor: pointer;

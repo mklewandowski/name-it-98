@@ -15,13 +15,9 @@ export const Header: React.FC = () => {
         <span className="green">E</span>
         <span className="blue">{` I`}</span>
         <span className="indigo">T</span>
-        <span className="violet">!</span>
         <span className="red">!</span>
         <span className="orange">!</span>
         <span className="yellow">!</span>
-        <span className="green">!</span>
-        <span className="blue">!</span>
-        <span className="indigo">!</span>
       </div>
       <img src={baby} alt="baby" />
     </header>
