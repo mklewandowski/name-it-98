@@ -1,4 +1,7 @@
-Name It '98 is a baby naming spoof site modeled after the brightly colored, animated gif heavy, "creatively" designed sites of the mid to late 1990s. Name It '98 is hosted on a GitHub Page at https://mklewandowski.github.io/name-it-98/
+# Name It '98
+Name It '98 is a baby naming spoof site modeled after the brightly colored, animated gif heavy, "creatively" designed sites of the mid to late 1990s. Name It '98 is hosted on a GitHub Page at [https://mklewandowski.github.io/name-it-98/](https://mklewandowski.github.io/name-it-98/).
+
+![Name It '98 gameplay](https://github.com/mklewandowski/name-it-98/blob/main/name.jpg?raw=true)
 
 ## Run Locally
 - clone GitHub repo
